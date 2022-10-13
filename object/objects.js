@@ -14,3 +14,4 @@ console.log(student["work exp"])//we can't use . operator here
 let techInput = 'tech'
 console.log(student.techInput)
 console.log(student[techInput])
+

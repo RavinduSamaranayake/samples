@@ -37,5 +37,5 @@ console.log(user7)
 //boolean
 let bool = 5 > 6
 console.log(bool);
-console.log(typeof bool);
+console.log(typeof  bool);
 
