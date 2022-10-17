@@ -20,10 +20,38 @@ value
         console.log('2nd then executed.....');
         return response + '2nd then success';
     }).then((response) => console.log(response))
-    .catch((error) => console.log('Error : ',error));
+    .catch((error) => console.log('Error : ',error))
+    .finally(() => {
+        console.log('Done');
+    });
 })
 
+//const response = await value; SyntaxError: await is only valid in async functions and the top level bodies of modules
 
+
+async function doSomething() {
+    try {
+        const response = await value; //wait untill value is resolved
+        console.log('async func executed. result is : ',response);
+    } catch(exception){
+        console.log(exception);
+    } 
+}
+doSomething();
+
+(() => {
+    console.log('Immediatly Invoked function(IIF)........');
+})();
+
+console.log('Async function handle in IIF')
+(async () => {
+    try {
+        const response = await value; //wait untill value is resolved
+        console.log('async func executed in IIF function. result is : ',response);
+    } catch(exception){
+        console.log(exception);
+    } 
+})();
 
 
 
