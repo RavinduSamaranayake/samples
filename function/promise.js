@@ -39,25 +39,6 @@ async function doSomething() {
 }
 doSomething();
 
-(() => {
-    console.log('Immediatly Invoked function(IIF)........');
-})();
-
-console.log('Async function handle in IIF')
-(async () => {
-    try {
-        const response = await value; //wait untill value is resolved
-        console.log('async func executed in IIF function. result is : ',response);
-    } catch(exception){
-        console.log(exception);
-    } 
-})();
-
-
-
-
-
-
 console.log('-------------Error handling---------');
 // const value2 = new Promise((resolve,reject) => {
 //     setTimeout(() => {
